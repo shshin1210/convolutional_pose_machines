@@ -7,6 +7,8 @@ receptive field(지역적 정보)를 global한 영역으로 확대하여 다른 
 
 ## 02. CPM model의 전체적인 흐름
 
+![cpmpic](https://user-images.githubusercontent.com/80568500/152297070-a47b8eac-cff0-4888-bd19-8fdd874dc814.PNG)
+
 신체 부위에 대한 belief map 을 반복하여 생성 (b_1 ~ b_T) 하여 다음 input 값으로 넣어주고 개선된 탐지를 가능하게 한다
 
 Gradient vanishing을 해결하기 위해 각 stage마다 loss를 계산한다. (intermediate supervsion)
@@ -18,6 +20,8 @@ CNN 하위 layer에는 local한 영역을 해석하고, 상위로 갈수록 rece
 해석한 정보는 각 stage를 구성하는 CNN의 feature map에 저장
 
 ## 03. Belief Map
+
+![beliefmap](https://user-images.githubusercontent.com/80568500/152297102-4bc48728-c2a3-4da1-9127-2ea836d9b3be.PNG)
 
 stage1에서 detect가 쉬운 parts들이 다음 stage에 어려운 part들을 예측하는데에 강한 정보가 된다.
 
